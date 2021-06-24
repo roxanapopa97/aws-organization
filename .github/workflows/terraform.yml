@@ -36,6 +36,7 @@ jobs:
       - name: Terraform validate
         run: terraform validate
   plan:
+    needs: [ validate ]
     runs-on: ubuntu-latest
     container:
       image: roxanapopa/docker-git-workflows:v0.1
