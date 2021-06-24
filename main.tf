@@ -37,6 +37,6 @@ resource "aws_organizations_account" "account" {
   name  = each.value.name
   email = each.value.email
   iam_user_access_to_billing = each.value.has_access_to_billing
-  parent_id = each.value.ou_id
+  parent_id = aws_organizations_organizational_unit.ou[each.value.ou_name].id
   role_name = each.value.role_name
 }
