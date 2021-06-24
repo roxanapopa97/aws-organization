@@ -1,15 +1,9 @@
 create_organization = true
-organizational_units = {
-  "prod_organizational_unit" : {
-    "name"      : "prod",
-  },
-  "dev_organizational_unit" : {
-    "name"      : "dev",
-  },
-  "audit_organizational_unit" : {
-    "name"      : "audit",
-  }
-}
+organizational_units = [
+    "prod",
+    "dev",
+    "audit"
+]
 member_accounts = {
   "prod_account" : {
     "name"  : "prod",         

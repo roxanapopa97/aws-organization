@@ -27,10 +27,8 @@ variable "feature_set" {
 
 # Variabile pentru aws_organizations_organizational_unit.ou
 variable "organizational_units" {
-  description = "(Optional) Map of objects that contain organizational unit configuration details: organizational unit name and parent id"
-  type        = map(object({
-    name      = string
-  }))
+  description = "(Optional) List of strings that contain organizational units names"
+  type        = list(string)
 }
 
 # Variabile pentru aws_organizations_account.account

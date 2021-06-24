@@ -20,8 +20,8 @@ resource "aws_organizations_organizational_unit" "ou" {
   #   - Optionale: organizational_units 
   # Variabile de iesire: N/A 
   # Documentatie oficiala: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_organizational_unit
-  for_each  = var.organizational_units
-  name      = each.value.name
+  for_each  = toset(var.organizational_units)
+  name      = each.key
   parent_id = aws_organizations_organization.org[0].roots[0].id
 }
 
