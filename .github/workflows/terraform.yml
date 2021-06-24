@@ -41,6 +41,8 @@ jobs:
     container:
       image: roxanapopa/docker-git-workflows:v0.1
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Terraform Plan
         run: terraform plan
 #   deploy:
