@@ -35,6 +35,13 @@ jobs:
         run: terraform init
       - name: Terraform validate
         run: terraform validate
+  plan:
+    runs-on: ubuntu-latest
+    container:
+      image: roxanapopa/docker-git-workflows:v0.1
+    steps:
+      - name: Terraform Plan
+        run: terraform plan
 #   deploy:
 #     # needs: [security_check]
 #     runs-on: ubuntu-latest
