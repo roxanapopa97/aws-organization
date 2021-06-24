@@ -33,6 +33,6 @@ variable "organizational_units" {
 
 # Variabile pentru aws_organizations_account.account
 variable "member_accounts" {
-  description = "(Optional) List of map of configurations for accounts that should be created. See README.md Usage section for details" 
+  description = "(Optional) List of map of configurations for accounts that should be created. See terraform.tfvars for an example" 
   type        = list(map(string))
 }
