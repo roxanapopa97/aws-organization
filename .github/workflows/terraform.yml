@@ -10,7 +10,7 @@ defaults:
     shell: bash
 
 env:
-  AWS_DEFAULT_REGION: us-east-1
+#   AWS_DEFAULT_REGION: us-east-1
   TEST_FOLDER: test
 
 jobs:
