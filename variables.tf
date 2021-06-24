@@ -41,7 +41,7 @@ variable "member_accounts" {
     name  = string       
     email = string
     has_access_to_billing = string 
-    ou_id = string
+    ou_name = string
     role_name = string
   }))
 }
