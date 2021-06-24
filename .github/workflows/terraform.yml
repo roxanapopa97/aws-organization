@@ -43,6 +43,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Terraform Init
+        run: terraform init
       - name: Terraform Plan
         run: terraform plan
 #   deploy:
