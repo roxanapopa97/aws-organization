@@ -27,12 +27,21 @@ variable "feature_set" {
 
 # Variabile pentru aws_organizations_organizational_unit.ou
 variable "organizational_units" {
-  description = "(Optional) List of maps that contain organizational unit configuration details: organizational unit name and parent id"
-  type        = list(map(string))
+  description = "(Optional) Map of objects that contain organizational unit configuration details: organizational unit name and parent id"
+  type        = map(object({
+    name      = string
+    parent_id = string
+  }))
 }
 
 # Variabile pentru aws_organizations_account.account
 variable "member_accounts" {
-  description = "(Optional) List of map of configurations for accounts that should be created. See terraform.tfvars for an example" 
-  type        = list(map(string))
+  description = "(Optional) Map of objects that contain configurations for accounts that should be created. See terraform.tfvars for an example" 
+  type        = map(object({
+    name  = string       
+    email = string
+    has_access_to_billing = string 
+    ou_id = string
+    role_name = string
+  }))
 }
