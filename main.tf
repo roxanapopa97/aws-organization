@@ -1,5 +1,6 @@
 provider "aws" {
   alias = "test"
+  region = us-east-1
   assume_role {
     role_arn     = "arn:aws:iam::753739125648:role/TerraformAutomationRole"
     session_name = "terraform-cicd"
