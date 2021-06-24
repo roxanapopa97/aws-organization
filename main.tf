@@ -7,6 +7,7 @@ provider "aws" {
   }
 }
 
+##
 resource "aws_s3_bucket" "b" {
   provider = aws.test 
   bucket   = "my-tf-test-bucket-570433319396"
