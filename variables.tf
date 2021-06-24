@@ -30,7 +30,6 @@ variable "organizational_units" {
   description = "(Optional) Map of objects that contain organizational unit configuration details: organizational unit name and parent id"
   type        = map(object({
     name      = string
-    parent_id = string
   }))
 }
 

@@ -2,15 +2,12 @@ create_organization = true
 organizational_units = {
   "prod_organizational_unit" : {
     "name"      : "prod",
-    "parent_id" : "r-50gs"
   },
   "dev_organizational_unit" : {
     "name"      : "dev",
-    "parent_id" : "r-50gs"
   },
   "audit_organizational_unit" : {
     "name"      : "audit",
-    "parent_id" : "r-50gs"
   }
 }
 member_accounts = {

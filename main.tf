@@ -22,7 +22,7 @@ resource "aws_organizations_organizational_unit" "ou" {
   # Documentatie oficiala: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_organizational_unit
   for_each  = var.organizational_units
   name      = each.value.name
-  parent_id = each.value.parent_id
+  parent_id = aws_organizations_organization.org.roots[0].id
 }
 
 resource "aws_organizations_account" "account" {
